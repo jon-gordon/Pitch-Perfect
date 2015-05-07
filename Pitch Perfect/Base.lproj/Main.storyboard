@@ -31,7 +31,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bg-1J-lSd">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bg-1J-lSd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,8 +76,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="showLabel" destination="rip-Ly-9JD" id="Qcf-HM-ELG"/>
-                        <outlet property="stopRecording" destination="7Bg-1J-lSd" id="OjJ-4c-sZc"/>
+                        <outlet property="recordingInProgress" destination="rip-Ly-9JD" id="f48-Vp-ViT"/>
+                        <outlet property="stopButton" destination="7Bg-1J-lSd" id="lZp-Eu-AiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
