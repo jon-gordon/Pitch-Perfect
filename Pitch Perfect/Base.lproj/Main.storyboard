@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TaB-ju-pzW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -39,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y0E-fd-e76"/>
-                                    <segue destination="O0Q-Ln-Sgm" kind="show" id="JwT-WB-tVB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,11 +82,12 @@
                         <outlet property="recordButton" destination="FRA-pd-lid" id="M9Z-jr-FzG"/>
                         <outlet property="recordingInProgress" destination="rip-Ly-9JD" id="f48-Vp-ViT"/>
                         <outlet property="stopButton" destination="7Bg-1J-lSd" id="lZp-Eu-AiD"/>
+                        <segue destination="O0Q-Ln-Sgm" kind="show" identifier="stopRecording" id="dxk-DS-CKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="338.25"/>
+            <point key="canvasLocation" x="1225.5" y="338.25"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="Z4x-jq-Oil">
@@ -144,12 +145,12 @@
                                 <exclude reference="bFz-Px-SR7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5Mc-aD-ieL"/>
-                                <exclude reference="gOp-tg-hqb"/>
+                                <exclude reference="Bl3-yH-pUQ"/>
                                 <exclude reference="qaO-cV-uXN"/>
                                 <exclude reference="y0z-Ip-WMw"/>
+                                <exclude reference="5Mc-aD-ieL"/>
+                                <exclude reference="gOp-tg-hqb"/>
                                 <exclude reference="g1c-9I-mvy"/>
-                                <exclude reference="Bl3-yH-pUQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -167,10 +168,10 @@
                                 <include reference="bFz-Px-SR7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Bl3-yH-pUQ"/>
                                 <include reference="qaO-cV-uXN"/>
                                 <include reference="y0z-Ip-WMw"/>
                                 <include reference="g1c-9I-mvy"/>
-                                <include reference="Bl3-yH-pUQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -180,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFX-gh-f8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1965" y="338.25"/>
+            <point key="canvasLocation" x="2161.5" y="338.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zP0-MB-Wv5">
