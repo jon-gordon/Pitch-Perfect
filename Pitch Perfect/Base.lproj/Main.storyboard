@@ -128,12 +128,36 @@
                                     <action selector="stopAudio:" destination="O0Q-Ln-Sgm" eventType="touchUpInside" id="QMf-NI-hsy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk9-rG-izB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="high">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="highPitch:" destination="O0Q-Ln-Sgm" eventType="touchUpInside" id="4qj-gB-q6q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-if-OBy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="low">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lowPitch:" destination="O0Q-Ln-Sgm" eventType="touchUpInside" id="oL2-PK-KM1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Opp-fa-UBl" firstAttribute="top" secondItem="HdP-BC-bBI" secondAttribute="bottom" constant="50" id="5Mc-aD-ieL"/>
+                            <constraint firstItem="Gk9-rG-izB" firstAttribute="top" secondItem="Opp-fa-UBl" secondAttribute="bottom" constant="136" id="89u-wx-ki6">
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                            </constraint>
                             <constraint firstItem="gG6-Kz-DQz" firstAttribute="top" secondItem="bFz-Px-SR7" secondAttribute="bottom" constant="20" id="Bl3-yH-pUQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fPk-if-OBy" secondAttribute="trailing" constant="30" id="NA5-OG-ui8"/>
+                            <constraint firstItem="fPk-if-OBy" firstAttribute="top" secondItem="FMs-av-lyX" secondAttribute="bottom" constant="100" id="cfd-WG-6XQ"/>
                             <constraint firstAttribute="centerX" secondItem="bFz-Px-SR7" secondAttribute="centerX" id="g1c-9I-mvy"/>
+                            <constraint firstItem="Gk9-rG-izB" firstAttribute="leading" secondItem="trI-m7-gaJ" secondAttribute="leadingMargin" constant="30" id="gF1-Wg-ues"/>
                             <constraint firstItem="Opp-fa-UBl" firstAttribute="leading" secondItem="trI-m7-gaJ" secondAttribute="leadingMargin" constant="30" id="gOp-tg-hqb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FMs-av-lyX" secondAttribute="trailing" constant="30" id="qaO-cV-uXN"/>
                             <constraint firstItem="FMs-av-lyX" firstAttribute="top" secondItem="HdP-BC-bBI" secondAttribute="bottom" constant="50" id="y0z-Ip-WMw"/>
@@ -143,14 +167,20 @@
                                 <exclude reference="Opp-fa-UBl"/>
                                 <exclude reference="FMs-av-lyX"/>
                                 <exclude reference="bFz-Px-SR7"/>
+                                <exclude reference="Gk9-rG-izB"/>
+                                <exclude reference="fPk-if-OBy"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Bl3-yH-pUQ"/>
                                 <exclude reference="qaO-cV-uXN"/>
                                 <exclude reference="y0z-Ip-WMw"/>
+                                <exclude reference="89u-wx-ki6"/>
+                                <exclude reference="gF1-Wg-ues"/>
                                 <exclude reference="5Mc-aD-ieL"/>
                                 <exclude reference="gOp-tg-hqb"/>
                                 <exclude reference="g1c-9I-mvy"/>
+                                <exclude reference="NA5-OG-ui8"/>
+                                <exclude reference="cfd-WG-6XQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -166,12 +196,18 @@
                             <mask key="subviews">
                                 <include reference="FMs-av-lyX"/>
                                 <include reference="bFz-Px-SR7"/>
+                                <include reference="Gk9-rG-izB"/>
+                                <include reference="fPk-if-OBy"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Bl3-yH-pUQ"/>
                                 <include reference="qaO-cV-uXN"/>
                                 <include reference="y0z-Ip-WMw"/>
+                                <include reference="89u-wx-ki6"/>
+                                <include reference="gF1-Wg-ues"/>
                                 <include reference="g1c-9I-mvy"/>
+                                <include reference="NA5-OG-ui8"/>
+                                <include reference="cfd-WG-6XQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -204,6 +240,8 @@
     </scenes>
     <resources>
         <image name="fast" width="100" height="100"/>
+        <image name="high" width="100" height="100"/>
+        <image name="low" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
